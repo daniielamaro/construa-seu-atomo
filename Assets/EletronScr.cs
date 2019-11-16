@@ -16,7 +16,7 @@ public class EletronScr : MonoBehaviour
     void Update()
     {
         GetComponent<Rigidbody>().velocity = Vector3.zero;
-        transform.RotateAround(CentroRotacao.transform.position, Vector3.forward, Time.deltaTime * 100);
-        transform.position = (transform.position - CentroRotacao.transform.position).normalized * DistanciaCentro + CentroRotacao.transform.position;
+        //transform.RotateAround(CentroRotacao.transform.position, Vector3.forward, Time.deltaTime * 100);
+        //transform.position = (transform.position - CentroRotacao.transform.position).normalized * DistanciaCentro + CentroRotacao.transform.position;
     }
 }

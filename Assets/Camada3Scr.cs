@@ -11,6 +11,7 @@ public class Camada3Scr : MonoBehaviour
     public GameObject EletronObj;
 
     private Transform transform;
+    private List<GameObject> Eletrons;
 
     public int DistribuicaoS;
     public int DistribuicaoP;
@@ -18,6 +19,7 @@ public class Camada3Scr : MonoBehaviour
 
     void Start(){
         transform = GetComponent<Transform>();
+        Eletrons = new List<GameObject>();
     }
 
     public void CreateNewEletron(){
@@ -32,11 +34,20 @@ public class Camada3Scr : MonoBehaviour
             }
         }
 
-        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + 4.5f, transform.position.z);
-
-        GameObject newEletron = Instantiate(EletronObj, newPosition, Quaternion.identity) as GameObject;
+        GameObject newEletron = Instantiate(EletronObj, Vector3.zero, Quaternion.identity) as GameObject;
         newEletron.GetComponent<EletronScr>().CentroRotacao = gameObject;
         newEletron.GetComponent<EletronScr>().DistanciaCentro = 4.5f;
+        Eletrons.Add(newEletron);
+        QuantEletrons++;
+
+        float radius = 4.5f;
+
+        for(int i = 0; i < QuantEletrons; i++){
+            float angle = i * Mathf.PI*2f / QuantEletrons+1;
+            Vector3 newPosition = new Vector3(Mathf.Cos(angle)*radius, Mathf.Sin(angle)*radius, 0f);
+
+            Eletrons[i].GetComponent<Transform>().position = newPosition;
+        }
 
         if(DistribuicaoS < 2){
             DistribuicaoS++;
@@ -45,7 +56,5 @@ public class Camada3Scr : MonoBehaviour
         }else if(DistribuicaoD < 10){
             DistribuicaoD++;
         }
-
-        QuantEletrons++;
     }
 }

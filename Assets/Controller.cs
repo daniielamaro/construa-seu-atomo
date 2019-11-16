@@ -15,10 +15,10 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int S1, P1, D1;
-        int S2, P2, D2;
+        int S1;
+        int S2, P2;
         int S3, P3, D3;
-        int S4, P4, D4;
+        int S4, P4;
 
         S1 = Camada1.GetComponent<Camada1Scr>().DistribuicaoS;
         S2 = Camada2.GetComponent<Camada2Scr>().DistribuicaoS;
