@@ -6,10 +6,13 @@ ScriptsOnlyBuild:
     - Camada3Scr
     - Camada4Scr
     - Controller
-    - EletronScr
+    - ParticulaScr
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -47,31 +50,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 9770}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 9824}
+      Script: {instanceID: 13652}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 13692}
     - Class: 114
-      Script: {instanceID: 9992}
+      Script: {instanceID: 13818}
     - Class: 114
-      Script: {instanceID: 10232}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 10566}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 10832}
+      Script: {instanceID: 14710}
     - Class: 114
-      Script: {instanceID: 10856}
+      Script: {instanceID: 14740}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 14906}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 15252}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 15290}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 15302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -79,6 +82,8 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -128,7 +133,7 @@ ScriptsOnlyBuild:
       Hash: f6725ffc563dfda4374b74c13084b3d1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EletronScr
+    className: ParticulaScr
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -485,7 +490,13 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 20eeaeae829475b5e354d1f626c51a2b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -533,7 +544,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 6f7f11523a0ffec5b1b56d88ea0233f9
+      Hash: a6a399ee2a54afc943ee811c334735ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Camada1Scr
@@ -546,4 +557,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/DanielGA/Desktop/construa.apk
+  playerPath: C:/Users/danielga/Desktop/construa.apk

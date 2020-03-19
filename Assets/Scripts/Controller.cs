@@ -31,6 +31,15 @@ public class Controller : MonoBehaviour
 
         D3 = Camada3.GetComponent<Camada3Scr>().DistribuicaoD;
 
+        if(S4 > 0){
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 65f, 1 * Time.deltaTime);
+        }else if(S3 > 0){
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 50f, 1 * Time.deltaTime);
+        }else if(S2 > 0){
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 35f, 1 * Time.deltaTime);
+        }else{
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 20f, 1 * Time.deltaTime);
+        }
 
         if(S1 > 0){
             DistribuicaoTxt.text = "1S"+S1;

@@ -44,7 +44,7 @@ public class Camada4Scr : MonoBehaviour
         for(int i = 0; i < QuantEletrons; i++){
             float angle = i * Mathf.PI*2f / QuantEletrons+1;
             Vector3 newPosition = new Vector3(Mathf.Cos(angle)*radius, Mathf.Sin(angle)*radius, 0f);
-            Eletrons[i].GetComponent<EletronScr>().posicao = newPosition;
+            Eletrons[i].GetComponent<ParticulaScr>().posicao = newPosition;
         }
 
         if(DistribuicaoS < 2){
